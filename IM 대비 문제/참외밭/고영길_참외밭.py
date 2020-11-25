@@ -11,7 +11,6 @@ for _ in range(6):
     infos.append(list(map(int, input().split())))
 w = sum([info[1] for info in infos if info[0] == 3])
 h = sum([info[1] for info in infos if info[0] == 2])
-
 # l1 : longest, l2 : second
 if w > h:
     l1, l2 = w, h
@@ -40,9 +39,12 @@ So we can notice ((index of long) + 3) % 6 = index of empty
 K = int(input())
 # w : ways that TaeYang walked
 w = [int(input().split()[1]) for _ in range(6)]
+print(w)
 # a,b : indexes of rectangle's long sides, c,d : indexes of empty rectangle's side
 a = w.index(max(w))
+print(a)
 b = w.index(max(w[a - 1], w[a + 1]))
+print(b)
 c = (a + 3) % 6
 d = (b + 3) % 6
 print(K * ((w[a] * w[b]) - (w[c] * w[d])))

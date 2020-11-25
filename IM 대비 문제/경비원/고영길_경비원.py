@@ -12,7 +12,7 @@ for _ in range(int(input()) + 1):
     a, b = map(int, input().split())
     # calculates the clockwise distance
     dist.append([0, r - b, h + b, b, r - w - b][a])
-
+print(dist)
 dong = dist.pop()
 ans = 0
 for point in dist:
